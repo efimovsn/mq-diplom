@@ -29,8 +29,7 @@ body {
   padding: 0;
 }
 
-.popup_hidden {
-  visibility: hidden;
+.popup {   
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -42,6 +41,10 @@ body {
   top: 0;
   bottom: 0;
   z-index: 200;
+}
+
+.hidden {
+  visibility: hidden;
 }
 .popup-form {
   position: fixed;
