@@ -29,40 +29,52 @@ body {
   padding: 0;
 }
 
-.cover-popup {
+.popup_hidden {
   visibility: hidden;
   position: fixed;
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column; 
   justify-content: center;
-  align-items: center;   
+  align-items: center;  
   background-color: rgba(0, 0, 0, 0.6);  
   top: 0;
   bottom: 0;
   z-index: 200;
 }
+.popup-form {
+  position: fixed;
+  width: 390px;
+  max-height: 610px;  
+  margin: auto;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
 
-.popup-form::before {
-  content: "";
+.popup-close {   
   background-image: url(../svg/form-x.svg);   
   width: 20px;
   height: 20px;
-  position: absolute;
   top: -27px;
   right: 0;
+  cursor: pointer;
+  position: absolute;
+  border: none;
+  background-color: inherit;
 }
-
-.popup-form {
+.popup-information {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;     
   width: 392px;
   position: sticky;
   padding: 55px 30px;
   box-sizing: border-box;
   background-color: #ffffff;
 }
-
 .section-title-top {
   position: relative;  
   font-size: 18px;
@@ -168,7 +180,7 @@ body {
   border: 0;  
   font-size: 14px;
   color: rgba(0, 0, 0, 0.541);
-  resize: none;
+  resize: none;  
 }
 textarea:hover,
 textarea:focus {
@@ -737,26 +749,23 @@ textarea:focus {
 .shop-post-price-new {
   font-size: 20px;
 }
-.shop-post-button {  
-  padding: 6px 30px;
-	font-size: 14px;
-	color: white;
-	text-transform: uppercase;
-	background-color: #b59f5a;	
-	border: none;
-  height: 100%;  
-}
-.shop-post-button:hover {
-	cursor: pointer;
-	background-color: #323232;
-	transition: all 0.3s ease;
-}
-.shop-post-button-link {
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;  
+.product-link {
+  display: block;
+  width: 141px;
+  height: 49px;
+  background-color: #b59f5b;
+  margin: 0;
+  border: 0;
+  font-size: 14px;
   font-weight: 700;
+  color: #ffffff;
+  line-height: 49px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
 }
+
 
 .socials {
   padding: 28px 0;
@@ -814,11 +823,11 @@ textarea:focus {
 
 
 @media (max-width: 1199px) {
-  .popup-form::before {    
+  .popup-close {    
     width: 30px;
     height: 30px; 
     background-size: 30px; 
-    top: -40px;
+    top: -37px;
   }
   .radio-group-text::before {    
     width: 25px;
@@ -994,8 +1003,12 @@ textarea:focus {
 
 
 @media (max-width: 640px) {
-  .popup-form {    
-    width: 332px;    
+  .popup-information {    
+    width: 332px; 
+    padding: 40px 30px;
+  }
+  .popup-close {  
+    right: 57px;
   }
   .container {
     padding: 0 15px;
