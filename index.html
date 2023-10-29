@@ -10,7 +10,9 @@
 
   <div class="popup hidden">          
     <form class="popup-form">      
-      <button class="popup-close" alt="Кнопка закрытия всплывающего окна"></button>      
+      <button class="popup-close">
+        <span class="visually-hidden">Нажмите кнопку для закрытия всплывпющего окна</span>
+      </button>      
       <div class="popup-information">
         <span class="section-title-top">Ваш фидбек</span>
         <div class="form-row">
@@ -311,10 +313,12 @@
             
             <form class="search">
               <label class="search-label">
-                <span class="search-title visually-hidden">Выполнить поиск</span>
                 <input type="text" class="search-form" placeholder="Найти..." required>
+                <span class="visually-hidden">Введите запрос для поиска</span>                
               </label>
-              <button class="search-button"></button>
+              <button class="search-button">
+                <span class="visually-hidden">Нажмите кнопку для выполнения поиска</span>
+              </button>
             </form>
   
           </div>                
